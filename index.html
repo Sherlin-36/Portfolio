@@ -4,16 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sherlin's Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        li {
+            margin: 0 15px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+        a:hover {
+            color: #f8b400;
+        }
+        section {
+            padding: 80px 50px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 80px auto;
+            width: 80%;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .project {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            color: #f8b400;
+        }
+        select {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #f8b400;
+            color: black;
+            font-size: 16px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <h1>SHERLIN S - PORTFOLIO</h1>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects Currently Working</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -21,13 +93,11 @@
         </nav>
     </header>
 
-    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I am Sherlin, a pre-final year B.Tech IT student at R.M.D. Engineering College. Passionate about software development, problem-solving, and cloud computing.Aspiring Software Engineer with a strong foundation in coding, problem-solving, and software development. Proficient in multiple programming languages, frameworks, and cloud platforms. Passionate about building scalable solutions and continuously improving technical skills.</p>
+        <p>I am Sherlin, a pre-final year B.Tech IT student at R.M.D. Engineering College. Passionate about software development, problem-solving, and cloud computing.</p>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
@@ -35,81 +105,34 @@
             <p>An interactive web app that visually represents sorting, searching, and graph algorithms to help users understand DSA concepts.</p>
         </div>
         <div class="project">
-            <h3>Cloud-Based File Storage System</h3>
-            <p>A secure cloud storage system with encryption and user authentication, similar to Google Drive.</p>
+            <h3>Password Generator</h3>
+            <p>A Java-based program that generates secure random passwords using letters, numbers, and symbols. Useful for security and authentication.</p>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Programming: C, C++, Java, Python</li>
-            <li>Web Development: HTML, CSS, JavaScript, ReactJS</li>
-            <li>Cloud Computing: AWS</li>
-            <li>Database: MySQL, MongoDB</li>
-        </ul>
+        <p>Programming: C, C++, Java</p>
+           <p> Web Development: HTML, CSS, JavaScript, ReactJS</p>
+            <p>Computing: AWS</p>
+            <p>Database: MySQL</p>
+        
     </section>
 
-    <!-- Achievements Section -->
     <section id="achievements">
         <h2>Achievements</h2>
         <ul>
-            <li>Completed 2 NPTEL Courses: Problem Solving using C Programming,Enhancing Soft Skills</li>
+            <li>Completed 2 NPTEL Courses: Problem Solving using C Programming, Enhancing Soft Skills</li>
             <li>Completed Infosys Springboard Certifications</li>
             <li>Organized a college coding event</li>
         </ul>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:22203050@rmd.ac.in">22203050@rmd.ac.in</a></p>
-        <p>Personal Email: <a href="mailto:sherlins173@gmail.com">sherlins173@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/sherlin-s-it-dept-453907267/" target="_blank">Sherlin S</a></p>
         <p>GitHub: <a href="https://github.com/Sherlin-36" target="_blank">Sherlin-36</a></p>
     </section>
-
-    
-    <style>
-        body {
-            background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center fixed;
-            background-size: cover;
-            font-family: Arial, sans-serif;
-            color: rgb(10, 2, 2);
-            text-align: center;
-        }
-        header nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            background: rgba(12, 132, 40, 0.7);
-        }
-        ul {
-            list-style: none;
-            display: flex;
-        }
-        li {
-            margin: 0 15px;
-        }
-        a {
-            text-decoration: none;
-            color: rgb(7, 4, 4);
-        }
-        section {
-            padding: 50px;
-            background: rgba(22, 96, 29, 0.6);
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 10px;
-        }
-        .project {
-            background: rgba(21, 126, 35, 0.1);
-            padding: 15px;
-            margin: 10px;
-            border-radius: 8px;
-        }
-    </style>
 </body>
 </html>
